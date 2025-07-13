@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
 
 const localUri = 'mongodb://localhost:27017';
-const atlasUri = 'mongodb+srv://johnson_8727:7j1kE7fumQWXjrol@cluster0.klmuljj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const atlasUri = process.env.ATLAS_URI;;
 
 async function migrate() {
   const localClient = new MongoClient(localUri);
