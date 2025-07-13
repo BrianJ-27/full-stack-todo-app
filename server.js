@@ -23,6 +23,7 @@ app.use(express.static('public'))
 async function go() {
   const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017'
   const client = new MongoClient(uri)
+  console.log('MongoDB URI being used:', uri)
 
   try {
     await client.connect()
